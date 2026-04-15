@@ -16,6 +16,14 @@ public class CellPhone {
         this.owner = "";
     }
 
+    public CellPhone(long serialNumber, String model, String carrier, String phoneNumber, String owner) {
+        this.serialNumber = serialNumber;
+        this.model = model;
+        this.carrier = carrier;
+        this.phoneNumber = phoneNumber;
+        this.owner = owner;
+    }
+
     // Getters and Setters
     public long getSerialNumber(){
         return serialNumber;
@@ -56,12 +64,8 @@ public class CellPhone {
         System.out.println("\n" + owner + "'s phone is calling " + number);
     }
 
-    public CellPhone(long serialNumber, String model, String carrier, String phoneNumber, String owner) {
-        this.serialNumber = serialNumber;
-        this.model = model;
-        this.carrier = carrier;
-        this.phoneNumber = phoneNumber;
-        this.owner = owner;
+    public void dial(CellPhone phone) {
+        System.out.println(owner + "'s phone is calling " + phone.getPhoneNumber());
     }
 }
 
