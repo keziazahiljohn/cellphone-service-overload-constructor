@@ -56,4 +56,12 @@ public class CellPhone {
         System.out.println("\n" + owner + "'s phone is calling " + number);
     }
 
+    public CellPhone(long serialNumber, String model, String carrier, String phoneNumber, String owner) {
+        this.serialNumber = serialNumber;
+        this.model = model;
+        this.carrier = carrier;
+        this.phoneNumber = phoneNumber;
+        this.owner = owner;
+    }
 }
+

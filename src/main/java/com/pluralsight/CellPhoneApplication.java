@@ -8,6 +8,7 @@ public class CellPhoneApplication {
         Scanner scanner = new Scanner(System.in);
         CellPhone cellPhone1 = new CellPhone();
         CellPhone cellPhone2 = new CellPhone();
+        CellPhone cellPhone3 = new CellPhone(12345, "iPhone 14", "Verizon", "111-222-3333", "Alice");
 
         // Cell Phone 1
         System.out.print("What is the serial number? ");
@@ -57,15 +58,18 @@ public class CellPhoneApplication {
 
         display(cellPhone1);
         display(cellPhone2);
+        display(cellPhone3);
 
         cellPhone1.dial(cellPhone2.getPhoneNumber());
         cellPhone2.dial(cellPhone1.getPhoneNumber());
+        cellPhone2.dial(cellPhone3.getPhoneNumber());
+
 
     }
 
     public static void display(CellPhone phone) {
         System.out.println("\nCell Phone Details:");
-        System.out.println("Serial Number" + phone.getSerialNumber());
+        System.out.println("Serial Number: " + phone.getSerialNumber());
         System.out.println("Model: " + phone.getModel());
         System.out.println("Carrier: " + phone.getCarrier());
         System.out.println("Phone Number: " + phone.getPhoneNumber());
